@@ -19,16 +19,11 @@
     <br>
     <div id="results">
     </div>
-    <br>
-    <div id="remaining">
-    </div>
+    
 
   <script type="text/javascript">
 
     // Creates variables
-    var computerScore = 0;
-    var wrong = 0;
-    var correct = 0;
     var guessesLeft = 9;
     var guessesMade = "";
     var wins = 0;
@@ -66,8 +61,8 @@
             }
             console.log(userGuess + " " + computerGuess);
             // Select the div with the correct id, and insert the following HTML into it.
+            document.querySelector("#game").innerHTML = "You chose: " + userGuess + ". <br />The computer chose: " + computerGuess;
             document.querySelector("#results").innerHTML = "Wins: " + wins + ". <br />Losses: " + losses + ". <br />Guesses Left: " + guessesLeft + "<br />Guesses so far: " + guessesMade;
-            document.querySelector("#game").innerHTML = "You chose: " + userGuess + ". The computer chose: " + computerGuess;
         }
     };
 
